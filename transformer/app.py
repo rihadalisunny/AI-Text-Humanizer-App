@@ -31,15 +31,14 @@ def download_nltk_resources():
             print(f"Error downloading {resource}: {str(e)}")
 
 
-# This class  contains methods to humanize academic text, such as improving readability or
-# simplifying complex language.
-class AcademicTextHumanizer:
+class TextScribeEngine:
     """
-    Transforms text into a more formal (academic) style:
-      - Expands contractions
-      - Adds academic transitions
-      - Optionally converts some sentences to passive voice
-      - Optionally replaces words with synonyms for more formality
+    A sophisticated text transformation engine that enhances writing to professional academic standards:
+      - Expands contractions for formal clarity
+      - Integrates scholarly transitions and connectors
+      - Implements strategic passive voice constructions
+      - Employs contextually appropriate synonym substitution
+      - Maintains consistent academic tone and style
     """
 
     def __init__(
@@ -61,10 +60,14 @@ class AcademicTextHumanizer:
         self.p_synonym_replacement = p_synonym_replacement
         self.p_academic_transition = p_academic_transition
 
-        # Common academic transitions
+        # Comprehensive collection of scholarly transitions
         self.academic_transitions = [
-            "Moreover,", "Additionally,", "Furthermore,", "Hence,", 
-            "Therefore,", "Consequently,", "Nonetheless,", "Nevertheless,"
+            "Moreover,", "Furthermore,", "Additionally,", "Subsequently,",
+            "Consequently,", "Therefore,", "Thus,", "Hence,",
+            "Nonetheless,", "Nevertheless,", "Conversely,", "Alternatively,",
+            "In contrast,", "Similarly,", "Specifically,", "Notably,",
+            "Indeed,", "Essentially,", "Fundamentally,", "Particularly,",
+            "In this context,", "Given these points,", "In light of this,", "To this end,"
         ]
 
     def humanize_text(self, text, use_passive=False, use_synonyms=False):

@@ -1,5 +1,5 @@
 import streamlit as st
-from transformer.app import AcademicTextHumanizer, NLP_GLOBAL, download_nltk_resources
+from transformer.app import TextScribeEngine, NLP_GLOBAL, download_nltk_resources
 from nltk.tokenize import word_tokenize
 
 
@@ -104,12 +104,12 @@ def main():
                 input_sentence_count = len(list(doc_input.sents))
 
                 # Transform
-                humanizer = AcademicTextHumanizer(
+                engine = TextScribeEngine(
                     p_passive=0.3,
                     p_synonym_replacement=0.3,
                     p_academic_transition=0.4
                 )
-                transformed = humanizer.humanize_text(
+                transformed = engine.humanize_text(
                     user_text,
                     use_passive=use_passive,
                     use_synonyms=use_synonyms
