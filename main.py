@@ -15,14 +15,14 @@ def main():
 
     # Configure Streamlit page
     st.set_page_config(
-        page_title="Humanize AI Generated text",
-        page_icon="🤖",
+        page_title="TextScribe Pro",
+        page_icon="✒️",
         layout="wide",
         initial_sidebar_state="expanded",
         menu_items={
-            'Get Help': "https://github.com/DadaNanjesha/AI-Text-Humanizer-App/issues",
-            'Report a bug': "https://github.com/DadaNanjesha/AI-Text-Humanizer-App/issues",
-            'About': "# This app is used to Humanize AI generated text"
+            'Get Help': "https://github.com/codejam/TextScribe-Pro/issues",
+            'Report a bug': "https://github.com/codejam/TextScribe-Pro/issues",
+            'About': "# TextScribe Pro - Academic Text Enhancement Tool"
         }
     )
 
@@ -33,15 +33,29 @@ def main():
         /* Center the main title */
         .title {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
             margin-top: 0.5em;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         /* Center the subtitle / introduction block */
         .intro {
             text-align: left;
-            line-height: 1.6;
-            margin-bottom: 1.2em;
+            line-height: 1.8;
+            margin: 2em auto;
+            padding: 2em;
+            border-radius: 10px;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        .feature-list {
+            margin-left: 20px;
+            color: #2a5298;
         }
         </style>
         """,
@@ -49,16 +63,17 @@ def main():
     )
 
     # --- Title / Intro ---
-    st.markdown("<div class='title'>🧔🏻‍♂️Humanize AI🤖 Generated text</div>", unsafe_allow_html=True)
+    st.markdown("<div class='title'>✒️ TextScribe Pro 📚</div>", unsafe_allow_html=True)
     st.markdown(
         """
         <div class='intro'>
-        <p><b>This app transforms your text into a more formal academic style by:<b><br>
-        • Expanding contractions<br>
-        • Adding academic transitions<br>
-        • <em>Optionally</em> converting some sentences to passive voice<br>
-        • <em>Optionally</em> replacing words with synonyms for a more formal tone.</p>
-        <hr>
+        <p><b>Elevate Your Writing with Advanced Academic Refinement</b></p>
+        <div class='feature-list'>
+        📝 Professional Contraction Expansion<br>
+        🔄 Sophisticated Academic Transitions<br>
+        🎯 Smart Passive Voice Integration<br>
+        💫 Intelligent Synonym Enhancement
+        </div>
         </div>
         """,
         unsafe_allow_html=True
